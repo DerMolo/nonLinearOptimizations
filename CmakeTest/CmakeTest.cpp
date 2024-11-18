@@ -10,8 +10,8 @@
 using namespace std;
 
 // evaluating expression using ExprTk
-std::vector<double> evaluateExpression(const std::string& expression, const std::vector<double>& xValues) {
-    std::vector<double> yValues;
+vector<double> evaluateExpression(const string& expression, const vector<double>& xValues) {
+    vector<double> yValues;
     exprtk::expression<double> expr;
     exprtk::symbol_table<double> symbolTable;
     double x;
@@ -22,7 +22,7 @@ std::vector<double> evaluateExpression(const std::string& expression, const std:
 
     exprtk::parser<double> parser;
     if (!parser.compile(expression, expr)) {
-        std::cerr << "Error parsing expression: " << parser.error() << std::endl;
+        cout << "Error parsing expression: " << parser.error() << endl;
         yValues.assign(xValues.size(), 0.0); // Fill with zeros on error
         return yValues;
     }
@@ -35,9 +35,8 @@ std::vector<double> evaluateExpression(const std::string& expression, const std:
 }
 
 int main() {
-    try {
         if (!glfwInit())
-            throw std::runtime_error("Failed to initialize GLFW");
+            throw runtime_error("Failed to initialize GLFW");
 
         GLFWwindow* window = glfwCreateWindow(1280, 720, "ImGui + ImPlot + ExprTk Demo", NULL, NULL);
         if (!window)
@@ -109,12 +108,4 @@ int main() {
         ImPlot::DestroyContext();
         glfwDestroyWindow(window);
         glfwTerminate();
-    }
-    catch (const std::exception& e) {
-        std::cerr << e.what() << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-
-    return 0;
 }
