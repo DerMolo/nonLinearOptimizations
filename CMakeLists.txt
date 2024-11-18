@@ -8,9 +8,13 @@ project(CmakeTest VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Specify source files
-set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src) # Source directory
-file(GLOB_RECURSE SOURCES ${SRC_DIR}/*.cpp)
+# Define source directory
+set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/CmakeTest)
+
+# Specify the source files explicitly
+set(SOURCES
+    ${SRC_DIR}/CmakeTest.cpp
+)
 
 # Add library directories
 set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs/imgui)
@@ -24,12 +28,13 @@ if (NOT EXISTS ${GLFW_BUILD_DIR}/Release)
 endif()
 
 # Include directories
+set(GLFW_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/include)
 include_directories(
+    ${GLFW_INCLUDE_DIR}
     ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
     ${IMPLOT_DIR}
     ${EXPRTK_DIR}
-    ${GLFW_BUILD_DIR}/../include
 )
 
 # Add ImGui and ImPlot sources
@@ -65,3 +70,8 @@ endif()
 
 # Link libraries AFTER target creation
 target_link_libraries(${PROJECT_NAME} ${GLFW_LIB} OpenGL::GL)
+
+# Add compile options for MSVC to handle large object files
+if (MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /bigobj)
+endif()

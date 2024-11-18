@@ -49,65 +49,73 @@ cmake_ninja_workdir = C$:\Users\Iampi\source\repos\CmakeTest\out\build\x64-debug
 
 build cmake_object_order_depends_target_CmakeTest: phony || CMakeFiles\CmakeTest.dir
 
+build CMakeFiles\CmakeTest.dir\CmakeTest\CmakeTest.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\CmakeTest\CmakeTest.cpp || cmake_object_order_depends_target_CmakeTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
+  OBJECT_DIR = CMakeFiles\CmakeTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\CmakeTest
+  TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
+  TARGET_PDB = CmakeTest.pdb
+
 build CMakeFiles\CmakeTest.dir\libs\imgui\imgui.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\imgui.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\imgui\imgui_draw.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\imgui_draw.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\imgui\imgui_tables.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\imgui_tables.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\imgui\imgui_widgets.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\imgui_widgets.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_opengl3.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends\imgui_impl_opengl3.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui\backends
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_glfw.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends\imgui_impl_glfw.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\imgui\backends
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\implot\implot.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\implot\implot.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\implot
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
   TARGET_PDB = CmakeTest.pdb
 
 build CMakeFiles\CmakeTest.dir\libs\implot\implot_items.cpp.obj: CXX_COMPILER__CmakeTest_unscanned_Debug C$:\Users\Iampi\source\repos\CmakeTest\libs\implot\implot_items.cpp || cmake_object_order_depends_target_CmakeTest
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\..\include
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 /bigobj
+  INCLUDES = -IC:\Users\Iampi\source\repos\CmakeTest\libs\glfw\include -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui -IC:\Users\Iampi\source\repos\CmakeTest\libs\imgui\backends -IC:\Users\Iampi\source\repos\CmakeTest\libs\implot -IC:\Users\Iampi\source\repos\CmakeTest\libs\exprtk
   OBJECT_DIR = CMakeFiles\CmakeTest.dir
   OBJECT_FILE_DIR = CMakeFiles\CmakeTest.dir\libs\implot
   TARGET_COMPILE_PDB = CMakeFiles\CmakeTest.dir\
@@ -121,7 +129,7 @@ build CMakeFiles\CmakeTest.dir\libs\implot\implot_items.cpp.obj: CXX_COMPILER__C
 #############################################
 # Link the executable CmakeTest.exe
 
-build CmakeTest.exe: CXX_EXECUTABLE_LINKER__CmakeTest_Debug CMakeFiles\CmakeTest.dir\libs\imgui\imgui.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_draw.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_tables.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_widgets.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_opengl3.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_glfw.cpp.obj CMakeFiles\CmakeTest.dir\libs\implot\implot.cpp.obj CMakeFiles\CmakeTest.dir\libs\implot\implot_items.cpp.obj | C$:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\Release\glfw3.lib
+build CmakeTest.exe: CXX_EXECUTABLE_LINKER__CmakeTest_Debug CMakeFiles\CmakeTest.dir\CmakeTest\CmakeTest.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_draw.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_tables.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\imgui_widgets.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_opengl3.cpp.obj CMakeFiles\CmakeTest.dir\libs\imgui\backends\imgui_impl_glfw.cpp.obj CMakeFiles\CmakeTest.dir\libs\implot\implot.cpp.obj CMakeFiles\CmakeTest.dir\libs\implot\implot_items.cpp.obj | C$:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\Release\glfw3.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Users\Iampi\source\repos\CmakeTest\libs\glfw\build\src\Release\glfw3.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

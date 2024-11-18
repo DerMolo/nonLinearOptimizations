@@ -12,7 +12,10 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CmakeTest",
+    "\\libs"
   ],
+  "SelectedNode": "\\CmakeTest\\CmakeTest.h",
   "PreviewInSolutionExplorer": false
 }
