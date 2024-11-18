@@ -1,0 +1,21 @@
+# Visual Studio directories
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# Build directories
+build/
+out/
+
+# Temporary files
+*.log
+*.obj
+*.exe
+*.dll
+*.pdb
+*.ninja_log
+*.ninja_deps
+
+# OS-specific
+.DS_Store
+Thumbs.db
