@@ -35,12 +35,13 @@ vector<double> evaluateExpression(const string& expression, const vector<double>
 }
 
 int main() {
+    //boiler plate plotter and window initialization 
         if (!glfwInit())
             throw runtime_error("Failed to initialize GLFW");
 
         GLFWwindow* window = glfwCreateWindow(1280, 720, "ImGui + ImPlot + ExprTk Demo", NULL, NULL);
         if (!window)
-            throw std::runtime_error("Failed to create GLFW window");
+            throw runtime_error("Failed to create GLFW window");
 
         glfwMakeContextCurrent(window);
         glfwSwapInterval(1);
@@ -77,7 +78,7 @@ int main() {
                 xValues.clear();
                 yValues.clear();
                 int numPoints = 1000;
-                double step = (xMax - xMin) / (numPoints - 1);
+                double step = (xMax - xMin) / (numPoints - 1); //resolution of the curve
                 for (int i = 0; i < numPoints; ++i) {
                     xValues.push_back(xMin + i * step);
                 }
