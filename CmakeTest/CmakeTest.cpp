@@ -91,6 +91,7 @@ int main() {
                 }
                 ImPlot::EndPlot();
             }
+
             ImGui::End();
 
             ImGui::Render();
