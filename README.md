@@ -4,10 +4,10 @@ Prerequisite installations:
   
 installation: 
 cd C:\Users\"yourusername"\source\repos
-git clone https://github.com/DerMolo/nonLinearOptimization
+git clone https://github.com/DerMolo/nonLinearOptimizations
 
 Downloading libraries into the lib folder: 
-cd nonLinearOptimization/lib
+cd nonLinearOptimizations/lib
 
 Invoke-WebRequest -Uri "https://github.com/ocornut/imgui/archive/refs/heads/master.zip" -OutFile "imgui.zip"
 Expand-Archive -Path "imgui.zip" -DestinationPath "imgui" -Force
