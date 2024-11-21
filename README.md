@@ -10,10 +10,10 @@ git clone https://github.com/DerMolo/nonLinearOptimizations
 Downloading libraries into the lib folder: 
 cd nonLinearOptimizations/libs
 
-git clone https://github.com/ArashPartow/exprtk.git exprtk
-git clone https://github.com/glfw/glfw.git glfw
-git clone https://github.com/epezent/implot.git implot
-git clone https://github.com/ocornut/imgui.git imgui
+- git clone https://github.com/ArashPartow/exprtk.git exprtk
+- git clone https://github.com/glfw/glfw.git glfw
+- git clone https://github.com/epezent/implot.git implot
+- git clone https://github.com/ocornut/imgui.git imgui
 
 Building glfw: 
 cd C:\Users\"yourusername"\source\repos\nonLinearOptimizations\libs\glfw
