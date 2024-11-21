@@ -8,6 +8,7 @@ cd C:\Users\"yourusername"\source\repos
 git clone https://github.com/DerMolo/nonLinearOptimizations
 
 Downloading libraries into the lib folder: 
+
 cd nonLinearOptimizations/libs
 
 - git clone https://github.com/ArashPartow/exprtk.git exprtk
