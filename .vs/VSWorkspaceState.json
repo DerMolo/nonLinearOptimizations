@@ -12,8 +12,8 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\libs"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
