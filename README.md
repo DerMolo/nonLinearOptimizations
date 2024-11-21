@@ -1,4 +1,6 @@
-Follow these instructions within powershell 
+Follow these instructions 
+
+within powershell 
 Prerequisite installations: 
 - git bash
 - Cmake https://cmake.org/download/
