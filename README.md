@@ -1,3 +1,8 @@
+Follow these instructions within powershell 
+Prerequisite installations: 
+- git bash
+  
+installation: 
 cd C:\Users\"yourusername"\source\repos
 git clone https://github.com/DerMolo/nonLinearOptimization
 
