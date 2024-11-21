@@ -1,26 +1,27 @@
 Follow these instructions within powershell 
 Prerequisite installations: 
 - git bash
+- Cmake https://cmake.org/download/
   
-installation: 
+library installation procedure: 
 cd C:\Users\"yourusername"\source\repos
 git clone https://github.com/DerMolo/nonLinearOptimizations
 
 Downloading libraries into the lib folder: 
-cd nonLinearOptimizations/lib
 
-Invoke-WebRequest -Uri "https://github.com/ocornut/imgui/archive/refs/heads/master.zip" -OutFile "imgui.zip"
-Expand-Archive -Path "imgui.zip" -DestinationPath "imgui" -Force
-Remove-Item "imgui.zip"
+cd nonLinearOptimizations/libs
 
-Invoke-WebRequest -Uri "https://github.com/epezent/implot/archive/refs/heads/master.zip" -OutFile "implot.zip"
-Expand-Archive -Path "implot.zip" -DestinationPath "implot" -Force
-Remove-Item "implot.zip"
+- git clone https://github.com/ArashPartow/exprtk.git exprtk
+- git clone https://github.com/glfw/glfw.git glfw
+- git clone https://github.com/epezent/implot.git implot
+- git clone https://github.com/ocornut/imgui.git imgui
 
-Invoke-WebRequest -Uri "https://www.partow.net/downloads/exprtk.zip" -OutFile "exprtk.zip"
-Expand-Archive -Path "exprtk.zip" -DestinationPath "exprtk" -Force
-Remove-Item "exprtk.zip"
+Building glfw: 
+cd C:\Users\"yourusername"\source\repos\nonLinearOptimizations\libs\glfw
+mkdir build
+cd build
+cmake .. -G "Visual Studio 17 2022"
 
-Invoke-WebRequest -Uri "https://github.com/glfw/glfw/releases/latest/download/glfw-3.3.8.bin.WIN64.zip" -OutFile "glfw.zip"
-Expand-Archive -Path "glfw.zip" -DestinationPath "glfw" -Force
-Remove-Item "glfw.zip"
+Now run glfw.sln as adminstrator in visual studios 2022, and build the project.
+
+AFterward, CmakeTest.cpp should be executable once successfully built.
