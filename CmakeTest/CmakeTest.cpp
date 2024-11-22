@@ -1,4 +1,4 @@
-﻿#include "imgui.h"
+#include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include "implot.h"
@@ -36,7 +36,7 @@ vector<double> evaluateExpression(const string& expression, const vector<double>
 double f(const string& expression, const double& xValue) {
     exprtk::expression<double> expr;
     exprtk::symbol_table<double> symbolTable;
-    double x = xValue; 
+    double x = xValue;
 
     symbolTable.add_variable("x", x);
     symbolTable.add_constants();
@@ -45,18 +45,18 @@ double f(const string& expression, const double& xValue) {
     exprtk::parser<double> parser;
     if (!parser.compile(expression, expr)) {
         cout << "Error parsing expression: " << parser.error() << endl;
-        return 0.0; 
+        return 0.0;
     }
 
-    return expr.value(); 
+    return expr.value();
 }
 double derivative(double value, const string& expr) {
     double h = 1e-6;
-    return (f(expr, value + h) - f(expr, value - h))/(2*h);
+    return (f(expr, value + h) - f(expr, value - h)) / (2 * h);
 }
 double secondDerivative(double value, const string& expr) {
     double h = 1e-6;
-    return (f(expr, value + h) -2*f(expr,value)+ f(expr, value - h)) / (h * h);
+    return (f(expr, value + h) - 2 * f(expr, value) + f(expr, value - h)) / (h * h);
 }
 vector<double> newtonMethod(double delta, double x0, const string& expr) {
     vector<double> answer = {};
@@ -78,9 +78,10 @@ vector<double> newtonMethod(double delta, double x0, const string& expr) {
             return answer;
         }
 
-        xk = xk1; 
+        xk = xk1;
+        count++;
     }
-    return { 0, 0, 0 };
+    return { 0, 0, (double)count }; //Outputs zero when second derivative is too small 
 }
 
 vector <double>goldenSection(double delta, double a, double b, int mode, const string& expr) {
@@ -88,14 +89,14 @@ vector <double>goldenSection(double delta, double a, double b, int mode, const s
     int count = 0;
     double x1 = b - (b - a) / GOLDEN_RATIO;
     double x2 = a + (b - a) / GOLDEN_RATIO;
-    double y1 = f(expr,x1); double y2 = f(expr,x2);
+    double y1 = f(expr, x1); double y2 = f(expr, x2);
     if (mode == 0) { //min
         while (abs(a - b) >= delta) {
             if (y1 >= y2) {
-                a = x1; x1 = x2; x2 = a + (b - a) / GOLDEN_RATIO; y1 = f(expr,x1); y2 = f(expr,x2);
+                a = x1; x1 = x2; x2 = a + (b - a) / GOLDEN_RATIO; y1 = f(expr, x1); y2 = f(expr, x2);
             }
             else {
-                b = x2; x2 = x1; x1 = b - (b - a) / GOLDEN_RATIO; y1 = f(expr,x1); y2 = f(expr,x2);
+                b = x2; x2 = x1; x1 = b - (b - a) / GOLDEN_RATIO; y1 = f(expr, x1); y2 = f(expr, x2);
             }
             count++;
         }
@@ -103,10 +104,10 @@ vector <double>goldenSection(double delta, double a, double b, int mode, const s
     else if (mode == 1) { //max
         while (abs(a - b) >= delta) {
             if (y1 <= y2) {
-                a = x1; x1 = x2; x2 = a + (b - a) / GOLDEN_RATIO; y1 = f(expr,x1); y2 = f(expr,x2);
+                a = x1; x1 = x2; x2 = a + (b - a) / GOLDEN_RATIO; y1 = f(expr, x1); y2 = f(expr, x2);
             }
             else {
-                b = x2; x2 = x1; x1 = b - (b - a) / GOLDEN_RATIO; y1 = f(expr,x1); y2 = f(expr,x2);
+                b = x2; x2 = x1; x1 = b - (b - a) / GOLDEN_RATIO; y1 = f(expr, x1); y2 = f(expr, x2);
             }
             count++;
         }
@@ -117,9 +118,10 @@ vector <double>goldenSection(double delta, double a, double b, int mode, const s
     }
 
     double x = (a + b) / 2;
-    answer.push_back(x); answer.push_back(f(expr,x)); answer.push_back(count);
+    answer.push_back(x); answer.push_back(f(expr, x)); answer.push_back(count);
     return answer;
 }
+
 int main() {
     // Boilerplate for GLFW and ImGui initialization
     if (!glfwInit())
@@ -137,7 +139,9 @@ int main() {
     ImPlot::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
     ImGui::StyleColorsDark();
-    (void)io;
+
+    // Set global font scaling
+    io.FontGlobalScale = 2.5f;
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
@@ -150,12 +154,12 @@ int main() {
     string goldenOutput1, goldenOutput2, newtonOutput1;
     vector<double> xValues, yValues;
 
-    //points for scatter plot
+    // Points for scatter plot
     double highlightGoldenXMin = NAN, highlightGoldenYMin = NAN;
     double highlightGoldenXMax = NAN, highlightGoldenYMax = NAN;
     double highlightNewtonX = NAN, highlightNewtonY = NAN;
 
-    //flags to prevent excessive plotting
+    // Flags to prevent excessive plotting
     bool needsPlotUpdate = true;
     bool needsOptimizationUpdate = false;
 
@@ -167,6 +171,7 @@ int main() {
         ImGui::NewFrame();
 
         // Main Function Plotter Window
+        ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
         ImGui::Begin("Function Plotter");
         ImGui::InputText("Function (use 'x' as the variable)", functionBuffer, sizeof(functionBuffer));
         ImGui::InputDouble("X Min", &xMin);
@@ -188,7 +193,7 @@ int main() {
 
         ImGui::End();
 
-
+        // Plot data if needed
         if (needsPlotUpdate) {
             xValues.clear();
             yValues.clear();
@@ -201,6 +206,7 @@ int main() {
             needsPlotUpdate = false;
         }
 
+        // Perform optimization if needed
         if (needsOptimizationUpdate) {
             auto goldenResult1 = goldenSection(delta, a, b, 0, functionBuffer);
             auto goldenResult2 = goldenSection(delta, a, b, 1, functionBuffer);
@@ -229,9 +235,11 @@ int main() {
             needsOptimizationUpdate = false; // Optimization results are up-to-date
         }
 
+        // Function Plot Window
+        ImGui::SetNextWindowSize(ImVec2(800, 600), ImGuiCond_FirstUseEver);
         ImGui::Begin("Function Plot");
-        // Plot Window
-        if (ImPlot::BeginPlot("Function Plot")) {
+        ImVec2 plotSize = ImGui::GetContentRegionAvail(); // Dynamically size the plot
+        if (ImPlot::BeginPlot("Function Plot", plotSize)) {
             if (!xValues.empty() && !yValues.empty()) {
                 ImPlot::PlotLine("f(x)", xValues.data(), yValues.data(), xValues.size());
             }
@@ -246,11 +254,10 @@ int main() {
             }
             ImPlot::EndPlot();
         }
-        else
-            cout << "begin plot failed" << endl;
         ImGui::End();
 
-        // Optimization Results 
+        // Optimization Results Window
+        ImGui::SetNextWindowSize(ImVec2(400, 300), ImGuiCond_FirstUseEver);
         ImGui::Begin("Optimization Results");
         ImGui::TextWrapped("%s", goldenOutput1.c_str());
         ImGui::Separator();
