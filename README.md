@@ -6,7 +6,7 @@ Prerequisite installations:
 - Cmake https://cmake.org/download/
   
 library installation procedure: 
-- cd C:\Users\'inputyourusername'\source\repos
+- cd C:\Users\"yourusername"\source\repos
 - git clone https://github.com/DerMolo/nonLinearOptimizations
 
 Downloading libraries into the lib folder: 
